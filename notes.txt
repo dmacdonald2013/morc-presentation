@@ -1,0 +1,43 @@
+= Introduction
+* Java Fluent API based on Apache Camel for black box integration testing (code completion)
+* Arose from SolArch role needing to test integration artifacts + 3rd party SaaS, alternatives painful (SoapUI), expensive, clunky
+* Runs as JUnit tests, fits in with integration artifacts
+
+= Simple Sync Request
+* Input processors, predicates, JUnit Test
+
+= Simple Sync Request Output
+* Exit code is number of failed tests (Nagios Integration)
+
+= CXF Example
+* Camel URL
+* xml data validation
+
+= Async Test Image
+* Concept of expectations
+
+= Async Test Layout
+* inputMessage
+* Async tests are different (fire and forget, no predicates)
+* Async Expectations (waits a while for an input, ordering differences)
+
+= Sync Test Image
+* Bread-and-Butter of our integration
+* explain
+
+= Sync Morc Image
+* Source of orchestration, can string together multiple expectations with ordering requirements
+
+= Sync Test 
+* xml
+* json
+* classpath
+* multiple expectations (can handle causal ordering with asynchronous and synchronous expectations)
+
+= Sync Test - lenient
+* decouple test from implementation
+
+= Other Features
+* Groovy templates - CSV and generating many test cases
+* Ordering + Parts
+* Exceptions + SOAP Faults
