@@ -1,10 +1,14 @@
 = Introduction
-* Java Fluent API based on Apache Camel for black box integration testing (code completion)
+* Java Fluent API based on Apache Camel for black box integration testing 
+* Allows you to use Camel plugins to communicate with third party systems (CXF, HTTP, JMS, etc. etc.)
+* Advantage of fluent API is code completion, auto-validation
 * Arose from SolArch role needing to test integration artifacts + 3rd party SaaS, alternatives painful (SoapUI), expensive, clunky
-* Runs as JUnit tests, fits in with integration artifacts
+* Too much boiler plate code with Camel
+* Runs as JUnit tests, fits in with other Java artifacts (Bamboo/CI)
 
 = Simple Sync Request
-* Input processors, predicates, JUnit Test
+* Input processors
+* predicates
 
 = Simple Sync Request Output
 * Exit code is number of failed tests (Nagios Integration)
@@ -12,6 +16,7 @@
 = CXF Example
 * Camel URL
 * xml data validation
+* WSDL only required for WS-Security 
 
 = Async Test Image
 * Concept of expectations
@@ -20,6 +25,7 @@
 * inputMessage
 * Async tests are different (fire and forget, no predicates)
 * Async Expectations (waits a while for an input, ordering differences)
+* Configure JMS with standard Spring/Camel
 
 = Sync Test Image
 * Bread-and-Butter of our integration
